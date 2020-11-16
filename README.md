@@ -5,3 +5,5 @@
 
 
 שתהיה לכם קריאה מהנה ובריאות איתנה.
+
+הורדה ישירה של הפיתרון: https://github.com/thenativ/s4ma3l-CSA-2020-Writeup/raw/main/%D7%A4%D7%99%D7%AA%D7%A8%D7%95%D7%9F%20%D7%90%D7%AA%D7%92%D7%A8%20%D7%A6'%D7%A7%D7%A4%D7%95%D7%99%D7%A0%D7%98%20-%20CSA%202020.docx
