@@ -1,0 +1,55 @@
+void	KeenAirThink		(objtype *ob)
+{
+	if (jumptime)
+	{
+		if (ob->state  == &s_keenjumpup1) {
+			switch(gamestate.mapon){
+			case 1:
+				ob->state->chosenshapenum = s_keenjumpup1.rightshapenum;
+				gamestate.key_index = gamestate.mapon-1; // 0, 1
+				break;
+			case 2:
+				ob->state->chosenshapenum = s_keenjumpup1.leftshapenum;				
+				gamestate.key_index = gamestate.mapon; // 2, 3
+				break;
+			}
+		}
+
+void KeenDieThink (objtype *ob)
+{
+	switch(gamestate.mapon){
+	case 4:
+		ob->state->chosenshapenum = s_keendie3.rightshapenum;
+		gamestate.key_index = gamestate.mapon; // 4,5 
+		break;
+	case 14:
+		ob->state->chosenshapenum = s_keendie3.leftshapenum;				
+		gamestate.key_index = 6; // 6, 7
+		break;
+	}
+
+	ob++;			// shut up compiler
+	playstate = died;
+}
+
+void KeenWalkThink (objtype *ob)
+{
+
+	int move;
+
+	if (ob->state == &s_keenwalk1) {
+		ob->state->chosenshapenum = s_keenwalk1.rightshapenum;
+		gamestate.key_index = 8; // 8, 9
+	}
+	else if (ob->state == &s_keenwalk2) {
+		ob->state->chosenshapenum = s_keenwalk2.rightshapenum;
+		gamestate.key_index = 10; // 10, 11
+	}
+	else if (ob->state == &s_keenwalk3) {
+		ob->state->chosenshapenum = s_keenwalk3.rightshapenum;
+		gamestate.key_index = 12; // 12, 13
+	}
+	else if (ob->state == &s_keenwalk4) {
+		ob->state->chosenshapenum = s_keenwalk4.rightshapenum;
+		gamestate.key_index = 14; // 14, 15
+	}
